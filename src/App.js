@@ -7,6 +7,7 @@ import IntroPage2Background from "./pages/intro/introPage2";
 import IcecreamPage from "./pages/game/game1/icecreamPage";
 import IntroPage3Background from "./pages/intro/introPage3";
 import IntroPage4Background from "./pages/intro/introPage4";
+import Game2Intro from "./pages/game/game2/game2_intro";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/icecream" element={<IcecreamPage />} />
       <Route path="/intro3" element={<IntroPage3Background />} />
       <Route path="/intro4" element={<IntroPage4Background />} />
+      <Route path="/game2intro" element={<Game2Intro />} />
     </Routes>
   );
 };
