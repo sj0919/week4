@@ -1,21 +1,20 @@
 import { useNavigate } from "react-router";
 import styled from "styled-components";
-import { ReactComponent as Logo_img } from "../../assets/common/logo_image.svg";
-import { ReactComponent as Logo_text } from "../../assets/common/logo_text.svg";
-import { ReactComponent as Kakao } from "../../assets/common/kakao_logo.svg";
+import { ReactComponent as Logo } from "../../assets/common/logo_text_nobackground.svg";
+import { ReactComponent as IntroPage1 } from "../../assets/intro/introimage1.svg";
+import { ReactComponent as Character } from "../../assets/login/characters_line.svg";
 
 const LoginPage = () => {
   const navigate = useNavigate();
 
   return (
     <Layout>
-      <StyledLogo_img />
-      <StyledLogo_text />
-      <Textarea placeholder="아이디" />
-      <Textarea placeholder="비밀번호" />
-      <LoginButton>로그인</LoginButton>
-      <Text>회원가입 / 아이디찾기</Text>
-      <Kakao />
+      <StyledIntroPage1 />
+      <LogoWrapper>
+        <StyledLogo />
+      </LogoWrapper>
+      <LoginButton>카카오로 시작하기</LoginButton>
+      <StyledCharacter />
     </Layout>
   );
 };
@@ -25,49 +24,48 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--orange-pri);
-  padding: 20px;
   padding-bottom: 100px;
-  height: 100%;
+  background-color: var(--orange-pri);
+  height: 100svh;
 `;
 
-const StyledLogo_img = styled(Logo_img)`
+const StyledIntroPage1 = styled(IntroPage1)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: 1; /* 뒤로 보내기 */
+  opacity: 0.8;
+`;
+
+const LogoWrapper = styled.div`
+  z-index: 2; /* 투명 배경 위에 표시 */
   margin-top: 50px;
-  margin-bottom: 30px;
 `;
-const StyledLogo_text = styled(Logo_text)`
-  margin-bottom: 80px;
+
+const StyledLogo = styled(Logo)`
+  width: 600px;
+  height: auto;
 `;
-const Textarea = styled.textarea`
-  display: flex;
-  padding: 8px 10px 13px 10px;
-  width: 397px;
-  height: 21px;
-  border: 1px solid var(--white);
-  border-radius: 10px;
-  background-color: var(--orange-pri);
-  resize: none;
-  font-size: 18px;
-  margin: 3px;
-  &::placeholder {
-    color: var(--white);
-  }
-`;
+
 const LoginButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 10px;
-  width: 419px;
+  width: 300px;
   height: 42px;
-  background-color: var(--white);
-  border: 1px solid var(--white);
+  background-color: #ffe100;
+  border: 0px;
   border-radius: 10px;
   font-size: 18px;
-  margin: 3px;
+  margin: 70px;
+  z-index: 2; /* 투명 배경 위에 표시 */
 `;
-const Text = styled.span`
-  font-size: 18px;
-  color: var(--white);
-  margin: 5px;
+
+const StyledCharacter = styled(Character)`
+  position: fixed;
+  bottom: 0;
+  z-index: 2; /* 투명 배경 위에 표시 */
 `;
