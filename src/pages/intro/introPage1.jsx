@@ -5,8 +5,9 @@ import { ReactComponent as Babbamon } from "../../assets/common/babbamon.svg";
 import { ReactComponent as Abbamon } from "../../assets/common/abbamon.svg";
 import { ReactComponent as Yeppomon } from "../../assets/common/yeppomon.svg";
 import { ReactComponent as Nabbamon } from "../../assets/common/nabbamon.svg";
-
+import { useNavigate } from "react-router";
 const IntroPage1Background = () => {
+  const navigate = useNavigate();
   return (
     <Layout>
       <StyledIntroPage1 />
@@ -21,7 +22,7 @@ const IntroPage1Background = () => {
         </Text>
       </TextContainer>
       <ButtonContainer>
-        <Button>시작하기</Button>
+        <Button onClick={() => navigate("/intro2")}>시작하기</Button>
         <Button>환경설정</Button>
       </ButtonContainer>
       <CharacterContainer>
