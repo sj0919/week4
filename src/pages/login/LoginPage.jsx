@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ReactComponent as Logo_img } from "../../assets/common/logo_image.svg";
 import { ReactComponent as Logo_text } from "../../assets/common/logo_text.svg";
 import { ReactComponent as Kakao } from "../../assets/common/kakao_logo.svg";
+
 const LoginPage = () => {
   const navigate = useNavigate();
 
