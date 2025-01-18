@@ -5,33 +5,28 @@ import { ReactComponent as Monkey } from "../../../assets/game/game2/monkey.svg"
 import { ReactComponent as Banana } from "../../../assets/game/game2/banana.svg";
 import { useNavigate } from "react-router";
 
-const Game2Intro = () => {
+const Game2Fail = () => {
   const navigate = useNavigate();
   return (
     <Layout>
       <StyledGame2Page />
       <TextContainer>
-        <Text>
-          바빠몬, 바빠 죽겠는데 원숭이지옥에 갇혔어요!
-          <Line>
-            <StyledMonkey />
-            가 던지는
-            <StyledBanana />를 피해 바빠몬을 구출해주세요!
-          </Line>
-        </Text>
+        <Text>Game Over 비상 비상 바빠몬 구출실패</Text>
       </TextContainer>
       <Babbamon />
-      <Button onClick={() => navigate("/game2")}>구출하러가기</Button>
+      <Button onClick={() => navigate("/choosegame")}>맵으로 돌아가기</Button>
     </Layout>
   );
 };
 
-export default Game2Intro;
+export default Game2Fail;
 
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100svh;
 `;
 
 const StyledGame2Page = styled(Game2Page)`
@@ -45,10 +40,11 @@ const StyledGame2Page = styled(Game2Page)`
 
 const TextContainer = styled.div`
   background-color: var(--white);
-  width: 820px;
-  height: 140px;
-  margin: 80px;
-  padding: 30px;
+  width: 700px;
+  height: 80px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  padding-top: 20px;
   border-radius: 20px;
   text-align: center;
 `;
@@ -82,7 +78,7 @@ const StyledBanana = styled(Banana)`
 
 const Button = styled.button`
   background-color: var(--white);
-  width: 140px;
+  width: 170px;
   height: 50px;
   font-size: 20px;
   border: 0px;
