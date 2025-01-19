@@ -4,7 +4,12 @@ import CameraPage from "./pages/intro/CameraPage";
 import LoginPage from "./pages/login/LoginPage";
 import IntroPage1Background from "./pages/intro/introPage1";
 import IntroPage2Background from "./pages/intro/introPage2";
+import Game1IntroPage from "./pages/game/game1/game1IntroPage";
 import IcecreamPage from "./pages/game/game1/icecreamPage";
+import BagPage from "./pages/game/game1/bagPage";
+import PersonalPage from "./pages/game/game1/personalPage";
+import FoodPage from "./pages/game/game1/foodPage";
+import Game1ResultPage from "./pages/game/game1/game1ResultPage";
 import IntroPage3Background from "./pages/intro/introPage3";
 import IntroPage4Background from "./pages/intro/introPage4";
 import Game2Intro from "./pages/game/game2/game2_intro";
@@ -21,7 +26,12 @@ const App = () => {
       <Route path="/camera" element={<CameraPage />} />
       <Route path="/intro1" element={<IntroPage1Background />} />
       <Route path="/intro2" element={<IntroPage2Background />} />
+      <Route path="/game1intro" element={<Game1IntroPage />} />
       <Route path="/icecream" element={<IcecreamPage />} />
+      <Route path="/bag" element={<BagPage />} />
+      <Route path="/personal" element={<PersonalPage />} />
+      <Route path="/food" element={<FoodPage />} />
+      <Route path="/game1result" element={<Game1ResultPage />} />
       <Route path="/intro3" element={<IntroPage3Background />} />
       <Route path="/intro4" element={<IntroPage4Background />} />
       <Route path="/game2intro" element={<Game2Intro />} />
