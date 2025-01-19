@@ -1,32 +1,28 @@
 import styled from "styled-components";
-import { ReactComponent as Game2Page } from "../../../assets/game/game2/game2_background.svg";
-import { ReactComponent as Babbamon } from "../../../assets/common/babbamon.svg";
+import { ReactComponent as Game3Page } from "../../../assets/game/game3/game3_background.svg";
+import { ReactComponent as Abbamon } from "../../../assets/common/abbamon.svg";
 import { ReactComponent as Monkey } from "../../../assets/game/game2/monkey.svg";
 import { ReactComponent as Banana } from "../../../assets/game/game2/banana.svg";
 import { useNavigate } from "react-router";
 
-const Game2Intro = () => {
+const Game3Intro = () => {
   const navigate = useNavigate();
   return (
     <Layout>
-      <StyledGame2Page />
+      <StyledGame3Page />
       <TextContainer>
         <Text>
-          바빠몬, 바빠 죽겠는데 원숭이지옥에 갇혔어요!
-          <Line>
-            <StyledMonkey />
-            가 던지는
-            <StyledBanana />를 피해 바빠몬을 구출해주세요!
-          </Line>
+          아빠몬이 퇴근길에 Traffic Jam에 갇혔어요! <br />
+          자동차들을 앞뒤로 밀어 아빠몬을 데려오세요!
         </Text>
       </TextContainer>
-      <Babbamon />
+      <Abbamon />
       <Button onClick={() => navigate("/game2")}>구출하러가기</Button>
     </Layout>
   );
 };
 
-export default Game2Intro;
+export default Game3Intro;
 
 const Layout = styled.div`
   display: flex;
@@ -34,7 +30,7 @@ const Layout = styled.div`
   align-items: center;
 `;
 
-const StyledGame2Page = styled(Game2Page)`
+const StyledGame3Page = styled(Game3Page)`
   position: absolute;
   top: 0;
   left: 0;

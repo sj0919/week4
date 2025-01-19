@@ -33,7 +33,7 @@ const IntroPage4Background = () => {
       <Screen>
         <TypingText>{text}</TypingText>
         {showButton && (
-          <Button onCLick={() => navigate("/")}>시작하기</Button>
+          <Button onCLick={() => navigate("/choosegame")}>시작하기</Button>
         )}{" "}
         {/* 버튼 표시 */}
       </Screen>
@@ -47,7 +47,7 @@ const Layout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100svh;
   position: relative;
 `;
 
