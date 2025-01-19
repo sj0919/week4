@@ -13,8 +13,7 @@ const IntroPage1Background = () => {
       <StyledIntroPage1 />
       <TextContainer>
         <Text>
-          알빠빌리지에 오신 여러분 <br />
-          환영합니다. <br />
+          알빠빌리지에 오신 여러분 환영합니다. <br />
           여러분은 납치되셨습니다. <br />
           매번 "알빠야?" 하는 당신의 이름은
           <br />
@@ -59,26 +58,30 @@ const TextContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 515px;
-  height: 362px;
+  width: 590px;
+  height: 300px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
-  margin-top: 60px;
+  margin-top: 100px;
 `;
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 160px;
+  margin-top: 170px;
 `;
 const Button = styled.button`
-  background-color: var(--orange-pri);
+  background-color: rgba(255, 120, 31, 0.75);
   width: 280px;
   height: 71px;
   font-size: 40px;
   border: 0px;
   border-radius: 10px;
   color: var(--white);
+  pointer: cursor;
+  &:hover {
+    background-color: var(--orange-pri);
+  }
 `;
 const Text = styled.span`
   font-size: 30px;
