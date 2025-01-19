@@ -17,7 +17,8 @@ import ChooseGamePage from "./pages/game/chooseGamePage";
 import Game2 from "./pages/game/game2/game2_main";
 import Game2Fail from "./pages/game/game2/game2_fail";
 import Game2Success from "./pages/game/game2/game2_success";
-import Game3Intro from "./pages/game/game3/game3_intro";
+import Game3Intro from "./pages/game/game3/game3Intro";
+import Game3Main from "./pages/game/game3/game3Main";
 import Game4Intro from "./pages/game/game4/game4_intro";
 import Game4 from "./pages/game/game4/game4_main";
 import Game4Sec from "./pages/game/game4/game4_main2";
@@ -43,6 +44,7 @@ const App = () => {
       <Route path="/game2fail" element={<Game2Fail />} />
       <Route path="/game2success" element={<Game2Success />} />
       <Route path="/game3intro" element={<Game3Intro />} />
+      <Route path="/game3main" element={<Game3Main />} />
       <Route path="/game4intro" element={<Game4Intro />} />
       <Route path="/game4" element={<Game4 />} />
       <Route path="/game4-2" element={<Game4Sec />} />
