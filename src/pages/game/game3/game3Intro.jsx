@@ -17,7 +17,7 @@ const Game3Intro = () => {
         </Text>
       </TextContainer>
       <Abbamon />
-      <Button onClick={() => navigate("/game2")}>구출하러가기</Button>
+      <Button onClick={() => navigate("/game3main")}>구출하러가기</Button>
     </Layout>
   );
 };
