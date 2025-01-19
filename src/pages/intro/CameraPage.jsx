@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { ReactComponent as Logo_text } from "../../assets/common/logo_text.svg";
 import { ReactComponent as Characters } from "../../assets/intro/character.svg";
 import { useRef, useState, useEffect } from "react";
 import { ReactComponent as Camera } from "../../assets/common/camera.svg";
+import { ReactComponent as IntroPage1 } from "../../assets/intro/introimage1.svg";
+import { ReactComponent as Logo_text } from "../../assets/common/logo_text_nobackground2.svg";
+import { ReactComponent as Albbamon } from "../../assets/common/albbamon.svg";
 
 const CameraPage = () => {
   const videoRef = useRef(null);
@@ -41,15 +43,19 @@ const CameraPage = () => {
 
   return (
     <Layout>
+      <StyledIntroPage1 />
       <TitleContainer>
         <StyledLogo_text />
         <Characters />
       </TitleContainer>
       <CameraContainer>
-        <VideoContainer>
-          <Video ref={videoRef} autoPlay muted />
-          <Canvas ref={canvasRef} />
-        </VideoContainer>
+        <AlbbamonContainer>
+          <StyledAlbbamon />
+          <VideoContainer>
+            <Video ref={videoRef} autoPlay muted />
+            <Canvas ref={canvasRef} />
+          </VideoContainer>
+        </AlbbamonContainer>
         <ButtonContainer>
           <Text>
             여러분의 얼굴을
@@ -79,8 +85,17 @@ export default CameraPage;
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: var(--orange-pri);
   height: 100vh;
+`;
+
+const StyledIntroPage1 = styled(IntroPage1)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  z-index: -1; /* 뒤로 보내기 */
+  opacity: 0.8;
 `;
 
 const TitleContainer = styled.div`
@@ -88,7 +103,8 @@ const TitleContainer = styled.div`
   flex-direction: row;
   align-items: center;
   margin-top: 50px;
-  margin-left: 120px;
+  margin-left: 170px;
+  gap: 20px;
 `;
 
 const StyledLogo_text = styled(Logo_text)`
@@ -99,18 +115,25 @@ const CameraContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 60px;
   margin-left: 160px;
 `;
 
-const VideoContainer = styled.div`
+const AlbbamonContainer = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: auto;
+`;
+
+const VideoContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
   background-color: black;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 50%;
+  z-index: 1;
 `;
 
 const Video = styled.video`
@@ -173,4 +196,9 @@ const PhotoPreview = styled.div`
     border: 2px solid var(--blue-pri);
     border-radius: 10px;
   }
+`;
+
+const StyledAlbbamon = styled(Albbamon)`
+  width: 500px;
+  height: 700px;
 `;
