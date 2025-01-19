@@ -208,6 +208,7 @@ const BabbamonContainer = styled.div`
   bottom: 10%;
   transform: translateX(-50%);
   width: 50px;
+  transition: left 0.2s ease-out;
 `;
 
 const StyledBabbamon = styled(Babbamon)`

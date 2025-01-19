@@ -17,7 +17,7 @@ const IntroPage4Background = () => {
       if (index < fullText.length) {
         setText((prev) => prev + fullText[index]);
         index++;
-        setTimeout(typeText, 100);
+        setTimeout(typeText, 50);
       } else {
         setShowButton(true); // 모든 텍스트가 타이핑되면 버튼 표시
       }
@@ -33,7 +33,7 @@ const IntroPage4Background = () => {
       <Screen>
         <TypingText>{text}</TypingText>
         {showButton && (
-          <Button onCLick={() => navigate("/choosegame")}>시작하기</Button>
+          <Button onClick={() => navigate("/choosegame")}>시작하기</Button>
         )}{" "}
         {/* 버튼 표시 */}
       </Screen>
